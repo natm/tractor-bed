@@ -1,0 +1,5 @@
+{
+        "id": "seth",
+        "mqtt" : { "username": "tractorbed-seth", "password": "",
+                   "host": "", "port": 1883 }
+}

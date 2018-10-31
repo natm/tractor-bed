@@ -1,0 +1,4 @@
+- name: restart tractordaemon
+  systemd:
+    name: tractordaemon
+    state: restarted

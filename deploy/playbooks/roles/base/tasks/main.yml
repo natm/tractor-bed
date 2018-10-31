@@ -1,0 +1,126 @@
+- name: update apt package cache
+  action: apt update_cache=yes
+
+- name: upgrade apt packages to latest
+  action: apt upgrade=safe
+
+- name: remove any unused packages
+  shell: "apt-get autoremove --assume-yes --purge"
+  sudo: yes
+
+- name: clean packages
+  shell: "apt-get autoclean --assume-yes"
+  sudo: yes
+
+- name: add user accounts
+  user: name={{ item.key }}
+    groups={{ item.value.groups }}
+    createhome=yes
+    state=present
+    shell=/bin/bash
+  with_dict: "{{ ssh_users }}"
+
+- name: add user keys
+  authorized_key:
+    user: "{{ item.key }}"
+    key: "{{ lookup('file', 'roles/base/files/keys/' + item.key) }}"
+    exclusive: yes
+  with_dict: "{{ ssh_users }}"
+
+- name: allow sudo without a password
+  template: src=sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root validate='visudo -cf %s'
+
+- name: sshd authorized keys location
+  lineinfile: dest=/etc/ssh/sshd_config
+    regexp=^AuthorizedKeysFile
+    line='AuthorizedKeysFile %h/.ssh/authorized_keys'
+    validate='/usr/sbin/sshd -T -f %s'
+  notify:
+  - restart sshd
+
+- name: sshd remove password authentication
+  lineinfile: dest=/etc/ssh/sshd_config
+    regexp="^PasswordAuthentication"
+    line="PasswordAuthentication no"
+    state=present
+  notify:
+  - restart sshd
+
+- name: sshd remove root access
+  lineinfile: dest=/etc/ssh/sshd_config
+    regexp="^PermitRootLogin"
+    line="PermitRootLogin no"
+    state=present
+  notify:
+  - restart sshd
+
+- name: install common packages
+  apt: name={{ item }}
+    state=latest
+    cache_valid_time=86400
+    update-cache=yes
+  with_items:
+    - git
+    - sudo
+    - lldpd
+    - mtr-tiny
+    - ccze
+    - htop
+    - tcpdump
+    - python3-pip
+    - python3-setuptools
+    - python-setuptools
+    - virtualenv
+
+- name: remove packages we don't want
+  apt: name={{ item }}
+    state=absent
+  with_items:
+    - avahi-daemon
+
+- name: remove default pi user
+  user: name=pi
+    state=absent
+    remove=yes
+
+- name: template /etc/hosts
+  template: src=hosts.j2 dest=/etc/hosts
+
+- name: tmpfs /tmp
+  mount:
+    path: /tmp
+    src: tmpfs
+    fstype: tmpfs
+    state: present
+    opts: defaults,noatime,nosuid,size=100m
+  notify:
+  - reboot
+
+- name: tmpfs /var/tmp
+  mount:
+    path: /var/tmp
+    src: tmpfs
+    fstype: tmpfs
+    state: present
+    opts: defaults,noatime,nosuid,size=30m
+  notify:
+  - reboot
+
+- name: tmpfs /var/log
+  mount:
+    path: /var/log
+    src: tmpfs
+    fstype: tmpfs
+    state: present
+    opts: defaults,noatime,nosuid,mode=0755,size=100m
+  notify:
+  - reboot
+
+- name: tmpfs /var/spool/mqueue
+  mount:
+    path: /var/spool/mqueue
+    src: tmpfs
+    fstype: tmpfs
+    state: present
+  notify:
+  - reboot

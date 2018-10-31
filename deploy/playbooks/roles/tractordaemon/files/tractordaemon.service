@@ -1,0 +1,11 @@
+[Unit]
+Description=tractordaemon
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/opt/tractordaemon/venv/bin/python /opt/tractordaemon/service.py -c /etc/tractordaemon.json
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

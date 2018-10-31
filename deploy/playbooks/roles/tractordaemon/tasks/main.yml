@@ -1,0 +1,37 @@
+- name: Creates /opt/tractordaemon
+  file: path=/opt/tractordaemon state=directory
+
+- name: Copy application
+  copy:
+    src=../../service/{{ item }}
+    dest=/opt/tractordaemon/
+    owner=root
+    group=root
+    mode=0755
+  with_items:
+    - requirements.txt
+    - service.py
+  notify:
+    - restart tractordaemon
+
+- name: Copy systemd service definition
+  copy:
+    src=files/tractordaemon.service
+    dest=/lib/systemd/system/tractordaemon.service
+    owner=root
+    group=root
+    mode=0644
+  notify:
+    - restart tractordaemon
+
+- name: Python3 virtualenv for tractordaemon
+  pip:
+    requirements=/opt/tractordaemon/requirements.txt
+    virtualenv=/opt/tractordaemon/venv
+    virtualenv_python=python3
+
+- name: Enable tractordaemon service
+  systemd:
+    name=tractordaemon
+    state=started
+    enabled=True
