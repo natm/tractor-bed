@@ -2,6 +2,25 @@
 
 Seth's tractor bed logic and controller, MQTT etc
 
+## Peripherals
+
+Inputs:
+
+* 5 x Push buttons connected directly to RaspberryPi GPIO pins with 10k pullup resistors
+
+Outputs:
+
+* 4 x Status LEDS; 1 green and 3 yellow.
+* 8 x 5v powered relays, capable of switching 220v @ 10A
+  * 1 x 5v roof amber beacon
+  * 2 x 12v LED headlights
+  * 4 x 12v LED roof side lights
+  * 1 spare relay (wired with 12v out)
+
+All outputs are driven using an MCP23017 expander.
+
+  
+  
 ## RaspberryPi setup
 
 PI zero setup notes:
