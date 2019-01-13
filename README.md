@@ -23,6 +23,36 @@ HATs:
 
 * Pimoroni SpeakerPhat
 
+### RaspberryPi GPIO
+
+| BCM      | Raspberry Pi | Mode   | Usage         |
+|----------|--------------|--------|---------------|
+|          |              | Output | Push button 1 |
+|          |              | Output | Push button 2 |
+|          |              | Output | Push button 3 |
+|          |              | Output | Push button 4 |
+|          |              | Output | Push button 5 |
+
+### MCP23017 Expander 1
+
+| Pin      | Mode   | Usage         |
+|----------|--------|---------------|
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+|          | Output |               |
+
+
 ## MQTT
 
 The unit is fully controllable via MQTT, startup and regular messages are published.
