@@ -19,6 +19,10 @@ Outputs:
 
 All outputs are driven using an MCP23017 expander.
 
+HATs:
+
+* Pimoroni SpeakerPhat
+
 ## MQTT
 
 The unit is fully controllable via MQTT, startup and regular messages are published.
