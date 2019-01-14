@@ -15,6 +15,11 @@ Installation
 * Mount PSU in a cool place
 * Check power cable is rate with a low fuse
 
+Software OS
+
+* Run SNMPd
+* Add Llainyresgob SSID
+
 Software daemon
 
 * Send correct system uptime
