@@ -35,23 +35,24 @@ HATs:
 
 ### MCP23017 Expander 1
 
-| Pin      | Mode   | Usage         |
-|----------|--------|---------------|
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-|          | Output |               |
-
+| MCP Name | MCP Pin | Mode   | Usage             |
+|----------|---------|--------|-------------------|
+| GPB0     | 1       | Output | Push button 1     |
+| GPB1     | 2       | Output | Push button 1     |
+| GPB2     | 3       | Output | Push button 1     |
+| GPB3     | 4       | Output | Push button 1     |
+| GPB4     | 5       | Output | Push button 1     |
+| GPB5     | 6       | Output | Push button 1     |
+| GPB6     | 7       | Output | Push button 1     |
+| GPB7     | 8       | Output | Push button 1     |
+| GPA0     | 21      | Output | Push button 1     |
+| GPA1     | 22      | Output | Push button 1     |
+| GPA2     | 23      | Output | Push button 1     |
+| GPA3     | 24      | Output | Push button 1     |
+| GPA4     | 25      | Output | Push button 1     |
+| GPA5     | 26      | Output | Push button 1     |
+| GPA6     | 27      | Output | Push button 1     |
+| GPA7     | 28      | Output | Push button 1     |
 
 ## MQTT
 
