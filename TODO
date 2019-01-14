@@ -1,0 +1,35 @@
+Hardware
+
+* Cut strip board to size
+* Mount boards inside control case
+* Fit external DC jacks on case
+* Wire DC jacks to relays
+* Fit gland for power supply cable
+* Put a DHT sensor on breadboard
+
+Installation
+
+* Wire roof lights to individual relays
+* Wire beacon to relay
+* WIre headlights to 2 relays
+* Mount PSU in a cool place
+* Check power cable is rate with a low fuse
+
+Software daemon
+
+* Send correct system uptime
+* Freeze buttons mode
+* Auto demo mode silent
+* Auto demo mode noisey
+* Toggle logic for all lights
+* Sounds button 1
+* Sounds button 2
+* Control lock out
+
+Software home assistant
+
+* Display button presses live
+* Show relay and LED status
+* Buttons to toggle/override relays
+* Global off button
+* Buttons to play misc sound files; goodnight, wakeup, going swimming today, etc
