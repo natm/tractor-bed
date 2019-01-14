@@ -40,3 +40,4 @@ Software home assistant
 * Buttons to toggle/override relays
 * Global off button
 * Buttons to play misc sound files; goodnight, wakeup, going swimming today, etc
+* Dropdown to set current mode
