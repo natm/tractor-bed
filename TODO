@@ -29,6 +29,7 @@ Software daemon
 * Toggle logic for all lights
 * Sounds button 1
 * Sounds button 2
+* Make it randomly stall
 * Control lock out
 * Mute sound mode
 * Output test mode, all outputs on.
