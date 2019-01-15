@@ -27,11 +27,11 @@ HATs:
 
 | BCM      | Raspberry Pi | Mode   | Usage         |
 |----------|--------------|--------|---------------|
-|          |              | Output | Push button 1 |
-|          |              | Output | Push button 2 |
-|          |              | Output | Push button 3 |
-|          |              | Output | Push button 4 |
-|          |              | Output | Push button 5 |
+|          | GPIO #5      | Input  | Push button 1 |
+|          | GPIO #6      | Input  | Push button 2 |
+|          | GPIO #13     | Input  | Push button 3 |
+|          | GPIO #25     | Input  | Push button 4 |
+|          | GPIO #26     | Input  | Push button 5 |
 
 ### MCP23017 Expander 1
 
