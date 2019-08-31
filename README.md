@@ -54,7 +54,7 @@ HATs:
 | GPA6     | 27      | Output | Push button 1     |
 | GPA7     | 28      | Output | Push button 1     |
 
-Cable to cabin
+Cable to rear cabin
 
 | Colour |                                                   | Voltage | Relay pin | Purpose   |
 |--------|---------------------------------------------------|---------|-----------|-----------|
@@ -66,7 +66,14 @@ Cable to cabin
 | White  | ![](https://placehold.it/15/dedede/000000?text=+) | 5v      | 7         |           |
 | Brown  | ![](https://placehold.it/15/785020/000000?text=+) | 5v      | 8         |           |
 
-Cable at front
+Cable at front bumper
+
+| Colour |                                                   | Voltage | Relay pin | Purpose   |
+|--------|---------------------------------------------------|---------|-----------|-----------|
+| Green/Yellow  | ![](https://placehold.it/15/3bfa19/000000?text=+)![](https://placehold.it/15/ffea00/000000?text=+) | Ground  |           |           |
+| Blue   | ![](https://placehold.it/15/3719fa/000000?text=+) | 12v     | 1         | Head light |
+| Brown  | ![](https://placehold.it/15/785020/000000?text=+) | 5v      | 2         | Head light |
+
 
 ## MQTT
 
