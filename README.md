@@ -54,6 +54,20 @@ HATs:
 | GPA6     | 27      | Output | Push button 1     |
 | GPA7     | 28      | Output | Push button 1     |
 
+Output cable
+
+| Colour | 
+|--------|
+| Black  |
+| Red    |
+| Green  |
+| Blue   |
+| Yellow |
+| White  |
+| Brown  |
+
+
+
 ## MQTT
 
 The unit is fully controllable via MQTT, startup and regular messages are published.
