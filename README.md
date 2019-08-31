@@ -56,15 +56,15 @@ HATs:
 
 Output cable
 
-| Colour |    | Purpose | Relay pin |
-|--------|----|---------|-----------|
+| Colour |    | Purpose | Relay pin | Voltage | 
+|--------|----|---------|-----------|---------|vv
 | Black  |    | Ground
 | Red    | ![](https://placehold.it/15/f03c15/000000?text=+) | | 3
 | Green  | | | 4
 | Blue   | | | 5
 | Yellow | | | 6
-| White  | | | 7
-| Brown  | | | 8
+| White  | | 5v | 7
+| Brown  | | 5v | 8
 
 
 
