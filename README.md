@@ -56,10 +56,10 @@ HATs:
 
 Output cable
 
-| Colour | 
-|--------|
-| Black  |
-| Red    |
+| Colour |    |
+|--------|----|
+| Black  |    |
+| Red    | (https://placehold.it/15/f03c15/000000?text=+)
 | Green  |
 | Blue   |
 | Yellow |
