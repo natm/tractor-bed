@@ -54,19 +54,19 @@ HATs:
 | GPA6     | 27      | Output | Push button 1     |
 | GPA7     | 28      | Output | Push button 1     |
 
-Output cable
+Cable to cabin
 
-| Colour |    | Purpose | Voltage | Relay pin  | 
-|--------|----|---------|-----------|---------|
-| Black  |    | Ground  |           |         |
-| Red    | ![](https://placehold.it/15/f03c15/000000?text=+) | 12v | 3 |
-| Green  | | 12v | 4 |
-| Blue   | | 12v | 5 |
-| Yellow | | 12v | 6 |
-| White  | | 5v | 7 |
-| Brown  | | 5v | 8 |
+| Colour |                                                   | Voltage | Relay pin | Purpose   |
+|--------|---------------------------------------------------|---------|-----------|-----------|
+| Black  | ![](https://placehold.it/15/000000/000000?text=+) | Ground  |           |           |
+| Red    | ![](https://placehold.it/15/eb4034/000000?text=+) | 12v     | 3         |           |
+| Green  | ![](https://placehold.it/15/3bfa19/000000?text=+) | 12v     | 4         |           |
+| Blue   | ![](https://placehold.it/15/3719fa/000000?text=+) | 12v     | 5         |           |
+| Yellow | ![](https://placehold.it/15/ffea00/000000?text=+) | 12v     | 6         |           |
+| White  | ![](https://placehold.it/15/dedede/000000?text=+) | 5v      | 7         |           |
+| Brown  | ![](https://placehold.it/15/785020/000000?text=+) | 5v      | 8         |           |
 
-
+Cable at front
 
 ## MQTT
 
