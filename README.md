@@ -56,8 +56,8 @@ HATs:
 
 Output cable
 
-| Colour |    | Purpose | Relay pin
-|--------|----| 
+| Colour |    | Purpose | Relay pin |
+|--------|----|---------|-----------|
 | Black  |    | Ground
 | Red    | ![](https://placehold.it/15/f03c15/000000?text=+) | | 3
 | Green  | | | 4
