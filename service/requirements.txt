@@ -1,5 +1,6 @@
 apscheduler
 paho-mqtt
-RPi.GPIO
+RPi.GPIO==0.7.0
 pygame
 wiringpi
+Adafruit-DHT
