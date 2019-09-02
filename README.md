@@ -6,6 +6,7 @@ Seth's tractor bed logic and controller, MQTT etc
 
 Inputs:
 
+* DHT11 temperature + humidity sensor
 * 5 x Push buttons connected directly to RaspberryPi GPIO pins with 10k pullup resistors
 
 Outputs:
@@ -30,6 +31,7 @@ HATs:
 |          | GPIO #5      | Input  | Push button 1 |
 |          | GPIO #6      | Input  | Push button 2 |
 |          | GPIO #13     | Input  | Push button 3 |
+|          | GPIO #22     | Input  | DHT11 sensor  |
 |          | GPIO #25     | Input  | Push button 4 |
 |          | GPIO #26     | Input  | Push button 5 |
 
