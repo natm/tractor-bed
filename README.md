@@ -79,12 +79,12 @@ Cable at front bumper
 
 The unit is fully controllable via MQTT, startup and regular messages are published.
 
-| Topic                                        |  Purpose                |  Frequency       | Example payload |   
+| Topic                                        |  Type                   |  Purpose          | Example payload |   
 |----------------------------------------------|-------------------------|------------------|-----------------|
-| tractorbed/{deviceid}/status                 |                         | once a minute    |                 |
-| tractorbed/{deviceid}/uptime                 |                         |                  |                 |
-| tractorbed/{deviceid}/version                |                         |                  |                 |
-| tractorbed/{deviceid}/service/cmnd/reset              |                         |                  |                 |
+| tractorbed/{deviceid}/status                 |  Pub                        | once a minute    |                 |
+| tractorbed/{deviceid}/uptime                 |  Pub                       |                  |                 |
+| tractorbed/{deviceid}/version                |  Pub                       |                  |                 |
+| tractorbed/{deviceid}/service/cmnd/reset              |  Sub                       |                  |                 |
 | tractorbed/{deviceid}/service/cmnd/localcontrol       |                         |                  |                 |
 | tractorbed/{deviceid}/service/stat/localcontrol       |                         |                  |                 |
 | tractorbed/{deviceid}/sounds/play                     |                         |                  |                 |
