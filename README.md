@@ -84,18 +84,36 @@ The unit is fully controllable via MQTT, startup and regular messages are publis
 | tractorbed/{deviceid}/status                 |                         | once a minute    |                 |
 | tractorbed/{deviceid}/uptime                 |                         |                  |                 |
 | tractorbed/{deviceid}/version                |                         |                  |                 |
-| tractorbed/seth/service/cmd/localcontrol     |                         |                  |                 |
-| tractorbed/seth/service/stat/localcontrol    |                         |                  |                 |
-| tractorbed/seth/service/cmd/ledpower         |                         |                  |                 |
-| tractorbed/seth/service/stat/ledpower        |                         |                  |                 |
-| tractorbed/seth/service/cmd/led1             |                         |                  |                 |
-| tractorbed/seth/service/stat/led1            |                         |                  |                 |
-| tractorbed/seth/service/cmd/led2             |                         |                  |                 |
-| tractorbed/seth/service/stat/led2            |                         |                  |                 |
-| tractorbed/seth/service/cmd/led3             |                         |                  |                 |
-| tractorbed/seth/service/stat/led3            |                         |                  |                 |
+| tractorbed/{deviceid}/service/cmnd/reset              |                         |                  |                 |
+| tractorbed/{deviceid}/service/cmnd/localcontrol       |                         |                  |                 |
+| tractorbed/{deviceid}/service/stat/localcontrol       |                         |                  |                 |
+| tractorbed/{deviceid}/sounds/play                     |                         |                  |                 |
+| tractorbed/{deviceid}/sounds/playing                  |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/ledpower           |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/ledpower           |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/led1               |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/led1               |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/led2               |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/led2               |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/led3               |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/led3               |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay1             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay1             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay2             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay2             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay3             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay3             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay4             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay4             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay5             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay5             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay6             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay6             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay7             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay7             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/cmnd/relay8             |                         |                  |                 |
+| tractorbed/{deviceid}/outputs/stat/relay8             |                         |                  |                 |
 
-  
 ## RaspberryPi setup
 
 PI zero setup notes:
