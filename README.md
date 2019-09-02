@@ -78,6 +78,23 @@ Cable at front bumper
 ## MQTT
 
 The unit is fully controllable via MQTT, startup and regular messages are published.
+
+| Topic                                        |  Purpose                |  Frequency       | Example payload |   
+|----------------------------------------------|-------------------------|------------------|-----------------|
+| tractorbed/{deviceid}/status                 |                         | once a minute    |                 |
+| tractorbed/{deviceid}/uptime                 |                         |                  |                 |
+| tractorbed/{deviceid}/version                |                         |                  |                 |
+| tractorbed/seth/service/cmd/localcontrol     |                         |                  |                 |
+| tractorbed/seth/service/stat/localcontrol    |                         |                  |                 |
+| tractorbed/seth/service/cmd/ledpower         |                         |                  |                 |
+| tractorbed/seth/service/stat/ledpower        |                         |                  |                 |
+| tractorbed/seth/service/cmd/led1             |                         |                  |                 |
+| tractorbed/seth/service/stat/led1            |                         |                  |                 |
+| tractorbed/seth/service/cmd/led2             |                         |                  |                 |
+| tractorbed/seth/service/stat/led2            |                         |                  |                 |
+| tractorbed/seth/service/cmd/led3             |                         |                  |                 |
+| tractorbed/seth/service/stat/led3            |                         |                  |                 |
+
   
 ## RaspberryPi setup
 
