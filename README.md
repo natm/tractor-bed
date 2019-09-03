@@ -87,12 +87,12 @@ The unit is fully controllable via MQTT, startup and regular messages are publis
 | `tractorbed/{deviceid}/uptime`                 |  Pub                       |                  |                 |
 | `tractorbed/{deviceid}/version`                |  Pub                       |                  |                 |
 | `tractorbed/{deviceid}/service/cmnd/reset`              |  Sub                       |                  |                 |
-| `tractorbed/{deviceid}/service/cmnd/localcontrol`       |                         |                  |                 |
-| `tractorbed/{deviceid}/service/stat/localcontrol`       |                         |                  |                 |
-| `tractorbed/{deviceid}/sounds/play`                     |                         |                  |                 |
-| `tractorbed/{deviceid}/sounds/playing`                  |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/ledpower`           |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/ledpower`           |                         |                  |                 |
+| `tractorbed/{deviceid}/service/cmnd/localcontrol`       |  Sub                    |                  |                 |
+| `tractorbed/{deviceid}/service/stat/localcontrol`       |  Pub                    |                  |                 |
+| `tractorbed/{deviceid}/sounds/play`                     |  Sub                    |                  |                 |
+| `tractorbed/{deviceid}/sounds/playing`                  |  Pub                    |                  |                 |
+| `tractorbed/{deviceid}/outputs/cmnd/ledpower`           |  Sub                    |                  |                 |
+| `tractorbed/{deviceid}/outputs/stat/ledpower`           |  Pub                    |                  |                 |
 | `tractorbed/{deviceid}/outputs/cmnd/led1`               |                         |                  |                 |
 | `tractorbed/{deviceid}/outputs/stat/led1`               |                         |                  |                 |
 | `tractorbed/{deviceid}/outputs/cmnd/led2`               |                         |                  |                 |
