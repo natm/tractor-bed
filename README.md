@@ -37,34 +37,36 @@ HATs:
 
 ### MCP23017 Expander 1
 
+TODO: add documentation, both MCP pin, plus i2c address
+
 | MCP Name | MCP Pin | Mode   | Usage             |
 |----------|---------|--------|-------------------|
-| GPB0     | 1       | Output | Push button 1     |
-| GPB1     | 2       | Output | Push button 1     |
-| GPB2     | 3       | Output | Push button 1     |
-| GPB3     | 4       | Output | Push button 1     |
-| GPB4     | 5       | Output | Push button 1     |
-| GPB5     | 6       | Output | Push button 1     |
-| GPB6     | 7       | Output | Push button 1     |
-| GPB7     | 8       | Output | Push button 1     |
-| GPA0     | 21      | Output | Push button 1     |
-| GPA1     | 22      | Output | Push button 1     |
-| GPA2     | 23      | Output | Push button 1     |
-| GPA3     | 24      | Output | Push button 1     |
-| GPA4     | 25      | Output | Push button 1     |
-| GPA5     | 26      | Output | Push button 1     |
-| GPA6     | 27      | Output | Push button 1     |
-| GPA7     | 28      | Output | Push button 1     |
+| GPB0     | 1       | Output |     |
+| GPB1     | 2       | Output |      |
+| GPB2     | 3       | Output |      |
+| GPB3     | 4       | Output |     |
+| GPB4     | 5       | Output |    |
+| GPB5     | 6       | Output |     |
+| GPB6     | 7       | Output |     |
+| GPB7     | 8       | Output |     |
+| GPA0     | 21      | Output |      |
+| GPA1     | 22      | Output |      |
+| GPA2     | 23      | Output |      |
+| GPA3     | 24      | Output |      |
+| GPA4     | 25      | Output |     |
+| GPA5     | 26      | Output |     |
+| GPA6     | 27      | Output |    |
+| GPA7     | 28      | Output |    |
 
 Cable to rear cabin
 
 | Colour |                                                   | Voltage | Relay pin | Purpose   |
 |--------|---------------------------------------------------|---------|-----------|-----------|
 | Black  | ![](https://placehold.it/15/000000/000000?text=+) | Ground  |           |           |
-| Red    | ![](https://placehold.it/15/eb4034/000000?text=+) | 12v     | 3         |           |
-| Green  | ![](https://placehold.it/15/3bfa19/000000?text=+) | 12v     | 4         |           |
-| Blue   | ![](https://placehold.it/15/3719fa/000000?text=+) | 12v     | 5         |           |
-| Yellow | ![](https://placehold.it/15/ffea00/000000?text=+) | 12v     | 6         |           |
+| Red    | ![](https://placehold.it/15/eb4034/000000?text=+) | 12v     | 3         | Roof light          |
+| Green  | ![](https://placehold.it/15/3bfa19/000000?text=+) | 12v     | 4         | Roof light           |
+| Blue   | ![](https://placehold.it/15/3719fa/000000?text=+) | 12v     | 5         | Roof light           |
+| Yellow | ![](https://placehold.it/15/ffea00/000000?text=+) | 12v     | 6         | Roof light           |
 | White  | ![](https://placehold.it/15/dedede/000000?text=+) | 12v     | 7         | Amber beacon  |
 | Brown  | ![](https://placehold.it/15/785020/000000?text=+) | 5v      | 8         |           |
 
