@@ -13,10 +13,10 @@ Outputs:
 
 * 4 x Status LEDS; 1 green and 3 yellow.
 * 8 x 5v powered relays, capable of switching 220v @ 10A
-  * 1 x 5v roof amber beacon
+  * 1 x 12v roof amber beacon
   * 2 x 12v LED headlights
   * 4 x 12v LED roof side lights
-  * 1 spare relay (wired with 12v out)
+  * 1 spare relay (wired with 5v out on rear cable)
 
 All outputs are driven using an MCP23017 expander.
 
@@ -65,7 +65,7 @@ Cable to rear cabin
 | Green  | ![](https://placehold.it/15/3bfa19/000000?text=+) | 12v     | 4         |           |
 | Blue   | ![](https://placehold.it/15/3719fa/000000?text=+) | 12v     | 5         |           |
 | Yellow | ![](https://placehold.it/15/ffea00/000000?text=+) | 12v     | 6         |           |
-| White  | ![](https://placehold.it/15/dedede/000000?text=+) | 5v      | 7         |           |
+| White  | ![](https://placehold.it/15/dedede/000000?text=+) | 12v     | 7         | Amber beacon  |
 | Brown  | ![](https://placehold.it/15/785020/000000?text=+) | 5v      | 8         |           |
 
 Cable at front bumper
@@ -91,6 +91,8 @@ The unit is fully controllable via MQTT, startup and regular messages are publis
 | `tractorbed/{deviceid}/service/stat/localcontrol`       |  Pub                    |                  |                 |
 | `tractorbed/{deviceid}/sounds/play`                     |  Sub                    |                  |                 |
 | `tractorbed/{deviceid}/sounds/playing`                  |  Pub                    |                  |                 |
+| `tractorbed/{deviceid}/sounds/available/all`            |  Pub                    |                  |                 |
+| `tractorbed/{deviceid}/sounds/available/{dir}`          |  Pub                    |                  |                 |
 | `tractorbed/{deviceid}/outputs/cmnd/ledpower`           |  Sub                    |                  |                 |
 | `tractorbed/{deviceid}/outputs/stat/ledpower`           |  Pub                    |                  |                 |
 | `tractorbed/{deviceid}/outputs/cmnd/led1`               |                         |                  |                 |
