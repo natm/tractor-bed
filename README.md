@@ -81,42 +81,44 @@ Cable at front bumper
 
 The unit is fully controllable via MQTT, startup and regular messages are published.
 
-| Topic                                        |  Type                   |  Purpose          | Example payload |   
-|----------------------------------------------|-------------------------|------------------|-----------------|
-| `tractorbed/{deviceid}/status`                 |  Pub                        | once a minute    |                 |
-| `tractorbed/{deviceid}/uptime`                 |  Pub                       |                  |                 |
-| `tractorbed/{deviceid}/version`                |  Pub                       |                  |                 |
-| `tractorbed/{deviceid}/service/cmnd/reset`              |  Sub                       |                  |                 |
-| `tractorbed/{deviceid}/service/cmnd/localcontrol`       |  Sub                    |                  |                 |
-| `tractorbed/{deviceid}/service/stat/localcontrol`       |  Pub                    |                  |                 |
-| `tractorbed/{deviceid}/sounds/play`                     |  Sub                    |                  |                 |
-| `tractorbed/{deviceid}/sounds/playing`                  |  Pub                    |                  |                 |
-| `tractorbed/{deviceid}/sounds/available/all`            |  Pub                    |                  |                 |
-| `tractorbed/{deviceid}/sounds/available/{dir}`          |  Pub                    |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/ledpower`           |  Sub                    |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/ledpower`           |  Pub                    |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/led1`               |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/led1`               |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/led2`               |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/led2`               |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/led3`               |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/led3`               |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay1`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay1`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay2`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay2`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay3`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay3`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay4`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay4`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay5`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay5`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay6`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay6`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay7`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay7`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/cmnd/relay8`             |                         |                  |                 |
-| `tractorbed/{deviceid}/outputs/stat/relay8`             |                         |                  |                 |
+| Topic                                                   |  Type                   |  Purpose          | Example payload |   
+|---------------------------------------------------------|-------------------------|------------------|-----------------|
+| `tractorbed/{deviceid}/status`                          |  Pub                    | once a minute    |                 |
+| `tractorbed/{deviceid}/uptime`                          |  Pub                    | seconds since startup     | 302             |
+| `tractorbed/{deviceid}/version`                         |  Pub                    |                  |                 |
+| `tractorbed/{deviceid}/humidity`                        |  Pub                    | once a minute    |  61.3               |
+| `tractorbed/{deviceid}/temperature`                     |  Pub                    | once a minute    |  22.5               |
+| `tractorbed/{deviceid}/service/cmnd/reset`              |  Sub                    |                  |                 |
+| `tractorbed/{deviceid}/service/cmnd/localcontrol`       |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/service/stat/localcontrol`       |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/sounds/play`                     |  Sub                    | Play MP3         | `sheep`         |
+| `tractorbed/{deviceid}/sounds/playing`                  |  Pub                    |                  | `sheep`         |
+| `tractorbed/{deviceid}/sounds/available/all`            |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/sounds/available/{dir}`          |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/ledpower`           |  Sub                    | Shows if local buttons are enabled                 | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/ledpower`           |  Pub                    | Shows if local buttons are enabled                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/led1`               |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/led1`               |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/led2`               |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/led2`               |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/led3`               |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/led3`               |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay1`             |  Sub                    | Headlight        | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay1`             |  Pub                    | Headlight        | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay2`             |  Sub                    | Headlight        | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay2`             |  Pub                    | Headlight        | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay3`             |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay3`             |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay4`             |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay4`             |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay5`             |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay5`             |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay6`             |  Sub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay6`             |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay7`             |  Sub                    | Amber roof beacon | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay7`             |  Pub                    | Amber roof beacon | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/cmnd/relay8`             |  Sub                    | Not connected    | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/outputs/stat/relay8`             |  Pub                    | Not connected    | `ON` or `OFF`   |
 
 ## RaspberryPi setup
 
