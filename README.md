@@ -97,6 +97,11 @@ The unit is fully controllable via MQTT, startup and regular messages are publis
 | `tractorbed/{deviceid}/sounds/playing`                  |  Pub                    |                  | `sheep`         |
 | `tractorbed/{deviceid}/sounds/available/all`            |  Pub                    |                  | `ON` or `OFF`   |
 | `tractorbed/{deviceid}/sounds/available/{dir}`          |  Pub                    |                  | `ON` or `OFF`   |
+| `tractorbed/{deviceid}/inputs/button1`                  |  Pub                    | Button 1         | `PRESSED`       |
+| `tractorbed/{deviceid}/inputs/button2`                  |  Pub                    | Button 1         | `PRESSED`       |
+| `tractorbed/{deviceid}/inputs/button3`                  |  Pub                    | Button 1         | `PRESSED`       |
+| `tractorbed/{deviceid}/inputs/button4`                  |  Pub                    | Button 1         | `PRESSED`       |
+| `tractorbed/{deviceid}/inputs/button5`                  |  Pub                    | Button 1         | `PRESSED`       |
 | `tractorbed/{deviceid}/outputs/cmnd/ledpower`           |  Sub                    | Shows if local buttons are enabled                 | `ON` or `OFF`   |
 | `tractorbed/{deviceid}/outputs/stat/ledpower`           |  Pub                    | Shows if local buttons are enabled                  | `ON` or `OFF`   |
 | `tractorbed/{deviceid}/outputs/cmnd/led1`               |  Sub                    |                  | `ON` or `OFF`   |
