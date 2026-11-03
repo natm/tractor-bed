@@ -77,7 +77,8 @@ class Output(object):
         addr = definition["addr"]
         wiringpi.digitalWrite(addr, definition[mode])
         suffix = "outputs/stat/%s" % (name)
-        publish_message(suffix=suffix, payload=mode.upper())
+        # Retained, so a subscriber that connects later still learns each output's state.
+        publish_message(suffix=suffix, payload=mode.upper(), retain=True)
 
     @staticmethod
     def set_from_mqtt(topic, payload):
@@ -88,6 +89,12 @@ class Output(object):
 
 def on_connect(client, data, flags, rc):
     LOG.info("Connected %s", rc)
+    # Subscribe on every (re)connect. A reconnect (Wi-Fi or broker blip) starts a
+    # fresh session, so subscriptions made once at start-up are otherwise lost and
+    # the bed stops receiving commands while still publishing its heartbeat.
+    client.subscribe("tractorbed/%s/outputs/cmnd/#" % (DEVICEID))
+    client.subscribe("tractorbed/%s/service/cmnd/#" % (DEVICEID))
+    client.subscribe("tractorbed/%s/sound/play" % (DEVICEID))
 
 def on_subscribe(client, userdata, mid, gqos):
     LOG.info("Subscribed %s", mid)
@@ -96,9 +103,9 @@ def on_message(client, userdata, msg):
     # this function is blocking MQTT calls, so dispatch a background job
     scheduler.add_job(job_handlemessage, kwargs={"topic": msg.topic, "payload": msg.payload.decode('utf-8')})
 
-def publish_message(suffix, payload, qos=0):
+def publish_message(suffix, payload, qos=0, retain=False):
     topic = "tractorbed/%s/%s" % (DEVICEID, suffix)
-    client.publish(topic=topic, payload=payload, qos=0)
+    client.publish(topic=topic, payload=payload, qos=qos, retain=retain)
 
 def job_handlemessage(topic, payload):
     if topic.endswith("/service/cmnd/localcontrol"):
@@ -207,15 +214,13 @@ def main():
 
     LOG.info("Connecting to MQTT")
     global client
-    client = mqtt.Client()
+    client = mqtt.Client(client_id="tractorbed-%s" % (DEVICEID))
     client.on_connect = on_connect
     client.on_message = on_message
     client.on_subscribe = on_subscribe
     client.username_pw_set(CONFIG["mqtt"]["username"], CONFIG["mqtt"]["password"])
     client.connect(CONFIG["mqtt"]["host"], CONFIG["mqtt"]["port"], 60)
-    client.subscribe("tractorbed/%s/outputs/cmnd/#" % (DEVICEID))
-    client.subscribe("tractorbed/%s/service/cmnd/#" % (DEVICEID))
-    client.subscribe("tractorbed/%s/sound/play" % (DEVICEID))
+    # Subscriptions now happen in on_connect(), so they survive reconnects.
 
     # setup GPIO
     init_io()
